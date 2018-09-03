@@ -9,9 +9,9 @@ const bot = new Discord.Client({disableEveryone: true});
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
 bot.on('ready',() => {
-bot.user.setActivity("live porn", {
+bot.user.setActivity("Made by `ScriptedBuilderz`", {
       type: "STREAMING",
-      url: "https://www.twitch.tv/monstercat"
+      url: "https://www.twitch.tv/ScriptedBuilderz"
     });
 })
 
@@ -43,10 +43,10 @@ bot.on("message", async message => {
        let warnreason = args.join(" ").slice(22);
         
         let warnembed = new Discord.RichEmbed()
-        .setThumbnail("https://cdn.discordapp.com/attachments/485820357975080981/485910357785837579/images.jpg")
+        .setThumbnail("https://cdn.discordapp.com/attachments/485822207306498048/486217971321143296/photo.jpg")
         .setColor("#c700ff")
         .addField("Warn Reason:", warnreason)
-        .setDescription("You have been warned in ***BigNiggaRebellion***")
+        .setDescription("You have been warned in ***Ahmed Mode [YT]***")
             
        message.reply("***User has been warned.***");   
             
@@ -55,12 +55,22 @@ bot.on("message", async message => {
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\       
  
    if(cmd === `${prefix}yt`){
-     message.reply("YOU NIGGA STOP WATCHING YOUTUBE, GET YO SWEATY ASS OUT THERE AND REBEL");
+     let embed = new Discord.RichEmbed()
+     .setDescription("This is the Official Ahmed Youtube channel.")
+     .addField("Instructions:", "Subscribe and smash that bell.")
+     .setFooter("Copyrighted by Ahmed Youtube.")
+     .setColor("#c700ff")        
+       message.reply(embed);
  }   
       
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-  if(cmd === `${prefix}Group`){
-  message.reply("YO NIGGA, THE NIGGA REBELLION BROKE NIGGA, GET YOU ASS OUT THERE ROBBING THAT DOSH NIGGA $$$$$$$$")
+  if(cmd === `${prefix}advertise`){
+  let embed = new Discord.RichEmbed()
+  .setDescription("Hello! I am glad you want to advertise our discord, well heres the link.")
+  .setTitle("link when you give it me")
+  .setColor("#c700ff") 
+  
+  message.reply(embed);
   }
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\      
 
@@ -69,8 +79,8 @@ if(cmd === `${prefix}shout`){
      let announcement = args.join(" ");
      let embed = new Discord.RichEmbed()
      .setDescription(announcement)
-     .setTitle("NIGGA ANNOUNCEMENT")
-     .setThumbnail("https://cdn.discordapp.com/attachments/485820357975080981/485910920728412170/images.jpg")
+     .setTitle("Announcement")
+     .setThumbnail("https://cdn.discordapp.com/attachments/485822207306498048/486217971321143296/photo.jpg")
      .setColor("#c700ff")
       message.delete();
      message.channel.send(embed)
@@ -100,7 +110,7 @@ if(cmd === `${prefix}dm`){
      let mention = args[0];
      const msg = args.slice("1").join(" ");
      
-     message.channel.send("User has been DM'ed! Thanks.");
+     message.reply("User has been DM'ed! Thanks.");
       message.delete().catch(O_o=>{});
       
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Sorry you cant DM people.");
@@ -127,7 +137,7 @@ if (cmd === `${prefix}report`){
    let reason = args.join(" ").slice(22);
 
    let reportembed = new Discord.RichEmbed()
-   .setThumbnail("https://cdn.discordapp.com/attachments/485820357975080981/485910920728412170/images.jpg")   
+   .setThumbnail("https://cdn.discordapp.com/attachments/485822207306498048/486217971321143296/photo.jpg")   
    .setDescription("Reports")
    .setColor("#c700ff")
    .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
@@ -159,7 +169,7 @@ if (cmd === `${prefix}report`){
   if(kUser.hasPermission("KICK_MEMBERS")) return message.reply("Sorry that user cannot be kicked.");
 
   let kEmbed = new Discord.RichEmbed()
-   .setThumbnail("https://cdn.discordapp.com/attachments/485820357975080981/485910920728412170/images.jpg") 
+   .setThumbnail("https://cdn.discordapp.com/attachments/485822207306498048/486217971321143296/photo.jpg") 
   .setDescription("/KICK/")
   .setColor("#62a4f5")
   .addField("Kicked User.", `${kUser} with the ID: ${kUser.id}`)
@@ -193,7 +203,7 @@ if (cmd === `${prefix}report`){
   
   
     let bEmbed = new Discord.RichEmbed()
-    .setThumbnail("https://cdn.discordapp.com/attachments/485820357975080981/485910920728412170/images.jpg")    
+    .setThumbnail("https://cdn.discordapp.com/attachments/485822207306498048/486217971321143296/photo.jpg")    
     .setDescription("/BAN/")
     .setColor("#FF0033")
     .addField("Banned User.", `${bUser} with the ID: ${bUser.id}`)
