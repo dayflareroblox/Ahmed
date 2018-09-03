@@ -59,7 +59,8 @@ bot.on("message", async message => {
      .setDescription("This is the Official Ahmed Youtube channel.")
      .addField("Instructions:", "Subscribe and smash that bell.")
      .setFooter("Copyrighted by Ahmed Youtube.")
-     .setColor("#c700ff")        
+     .setColor("#c700ff")   
+     .setTitle("https://www.youtube.com/channel/UC69J_O4O-wzFZHNewqtZ4Gg")
        message.reply(embed);
  }   
       
